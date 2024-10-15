@@ -1,0 +1,88 @@
+.project1{
+    background-color: #000000;
+    height: 100vh;
+    position: relative;
+}
+.n1{
+    color: #FCF6F4;
+}
+.arr1{
+    background-color: #FCF6F4;
+}
+.arr1:hover{
+    box-shadow: 0 0 5px 2px #FCF6F4 ;
+    background-color: #574d4d;
+}
+.resize svg{
+    fill: #FCF6F4;
+}
+.line1{
+    background-color: #FCF6F4;
+    width: 2px;
+    height: 8rem;
+}
+.boxes{
+    position: fixed;
+    top: 6rem;
+    /* height: 40vh; */
+    left: 1rem;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    transition: all .2s;
+    
+    transform: scale(.98);
+    will-change: transform;
+    
+    
+    user-select: none;
+    padding: 100px;
+    scrollbar-width: none;
+    cursor: grab;
+}
+@media only screen and (max-height: 750px) {
+    .items {
+        padding: 48px;
+    }
+}
+.card1{
+    width: 320px;
+    height: 300px;
+    perspective: 1000px;
+    border-radius: 0px 50px;
+}
+.card-inner{
+    position: relative;
+    text-align: center;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+}
+.colo{
+    color: black;
+}
+.front{
+    /* width: 16rem; */
+    /* height: 40vh; */
+    padding: 1.5rem 2rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #FCF6F4;
+    border: 1px solid #fcf6f4;
+    border-radius: 0px 50px;
+    
+}
+.disc{
+    /* font-size: calc(0.7em + 0.3vw); */
+    font-size: 13.3px;
+    /* font-weight: 500; */
+    color: #000000;
+}
+.flip_front{
+    width: 100%;
+    height: 100%;
+    /* display: none; */
+}

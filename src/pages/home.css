@@ -1,0 +1,212 @@
+.navigate{
+    background-color: #F4F6FF;
+    height: 100vh;
+    position: relative;
+    padding: 1.5rem;
+    margin: 0;
+}
+.navigate h1{
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 500;
+    font-style: normal;
+  }
+.name{
+    position: fixed;
+    top: 2rem;
+    left: 1.5rem;
+}
+.ubuntu-regular-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+.anta-regular {
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /* font-size: 20px; */
+  }
+.resume{
+    position: absolute;
+    top: 4% !important;
+    left: calc(1rem + 25vw);
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    /* transition: 1s; */
+}
+.resume:hover, #con:hover{
+    transform: translateY(0px) scale(1.1) translateZ(0px);
+}
+.arr{
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    background-color: #F4F6FF;
+    padding: 0.3rem;
+    border-radius: 50%;
+    color: black;
+    border: 1px solid black;
+    width: 2.5rem;
+    height: 2.5rem;
+    z-index: 10;
+    cursor: pointer;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 10px;
+    -webkit-box-align: center;
+}
+.arr:hover{
+    box-shadow: 0 0 5px black;
+}
+.arr svg{
+    width: 30px;
+    height: 30px;
+    font-weight: 400;
+}
+#con{
+    position: absolute;
+    top: 2rem;
+    right: calc(1rem + 2vw);
+    text-decoration: none;
+    z-index: 1;
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+}
+#pro{
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 50%;
+    right: calc(1rem + 2vw);
+    transform: rotate(90deg)translate(-40%,-80%);
+    font-size: 1.5rem;
+    margin: 0;
+    text-decoration: none;
+}
+#pro p:hover{
+    transform: translateY(0px) scale(1.1) translateZ(0px);
+}
+#ski{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+}
+.a1:hover{
+    transform: scale(1.1) translateY(0px) translateZ(0px)
+}
+.a2:hover{
+    transform: scale(1.1);
+}
+#ski p{
+    margin: 0;
+}
+.social{
+    position: fixed;
+    bottom: 0px;
+    left: 2rem;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.social a{
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.social a:hover{
+    transform: scale(1.1);
+}
+#line{
+    background-color: rgb(0, 0, 0);
+    width: 2px;
+    height: 8rem;
+}
+.social svg{
+    width: 25px;
+    height: 25px;
+}
+.heart{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    font-size: 100%;
+    align-items: center;
+}
+.heart svg{
+    /* padding: 5%; */
+    animation-name: turn;
+    /* animation: 1.5s linear 0s infinite; */
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    color: black;
+    /* border: 5px solid black;
+    border-radius: 50%; */
+}
+@keyframes turn{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.heart span{
+    padding-top: 10%;   
+}
+@media only screen and (min-width:320px) and (max-width:480px){
+    p{
+        font-size: 16px;
+    }
+    .heart{
+        width: 150px;
+        height: 150px;
+    }
+    .social svg {
+        width: 20px;
+        height: 20px;
+    }
+    .social{
+        left: 1rem;
+    }
+    .resume{
+        position: absolute;
+        top: 25% !important;
+        left: calc(1rem + 2vw);
+        transform: translate(-50%, -50%) rotate(-90deg);
+        z-index: 1;
+        text-decoration: none;
+    }
+    #con p{
+        font-size: 18.72px;
+    }
+}
+@media only screen and (min-width:480px) and (max-width:1180px){
+    .resume{
+        position: absolute;
+        top: 25% !important;
+        left: calc(1rem + 2vw);
+        transform: translate(-50%, -50%) rotate(-90deg);
+        z-index: 1;
+        text-decoration: none;
+    }
+}
