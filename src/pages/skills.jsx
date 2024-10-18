@@ -1,20 +1,14 @@
 import { Link } from 'react-router-dom'
-import './home.css'
+import './skills.css'
 
-function Home(){
+function Skills(){
+
     return<>
-    <div className='navigate anta-regular'>
+    <div className='skills'>
         <h1 className='pacifico-regular name'>Rakesh</h1>
-        <a href='https://drive.google.com/file/d/1939ZgLA777BE7ofH_VT-9vC_mUsbjBFw/view?usp=sharing' target="_blank" className='resume'><p>Resume</p></a>
-        <button className='arr'>
+        <Link to={'/'} className='arr'>
         <svg aria-hidden="true" data-prefix="fas" data-icon="arrow-left" class="prefix__svg-inline--fa prefix__fa-power-off prefix__fa-w-16 svg-inline--fa fa-arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30" fill="currentColor"><path fill="currentColor" d="M447.1 256C447.1 273.7 433.7 288 416 288H109.3l105.4 105.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448s-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H416C433.7 224 447.1 238.3 447.1 256z"></path></svg>
-        </button>
-        <a href='mailto:rakesh.rajendiran1@gmail.com' id='con'><p>Say hi..</p></a>
-        <Link to={'/project'} id='pro'><p >Projects</p></Link>
-        <div id='ski'>
-            <Link to={'/about'}><p className='a1'>About</p></Link>
-            <Link to={'/skill'}><p className='a2'>My Skills</p></Link>
-        </div>
+        </Link>
         <div className='social'>
         <a href='https://www.linkedin.com/in/rakeshrajendiran' target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" className='' width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
@@ -43,15 +37,8 @@ function Home(){
         </a>
         <span id='line'></span>
         </div>
-        <div className='heart'>
-            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor" class="bi bi-yin-yang" viewBox="0 0 16 16">
-            <path d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0"/>
-            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7m7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334"/>
-            </svg>
-            <span>Click here</span>
-        </div>
-
+        <h1 className='bg-skill roboto-black'>Skills</h1>
     </div>
     </>
 }
-export default Home
+export default Skills

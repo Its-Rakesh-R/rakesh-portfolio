@@ -22,32 +22,36 @@
     height: 8rem;
 }
 .boxes{
+    width: 100vw;
     position: fixed;
     top: 6rem;
     /* height: 40vh; */
     left: 1rem;
     display: flex;
     overflow-x: scroll;
-    overflow-y: hidden;
-    transition: all .2s;
-    
+    overflow-y:visible;
+    transition: all .2s;   
     transform: scale(.98);
     will-change: transform;
-    
-    
     user-select: none;
     padding: 100px;
     scrollbar-width: none;
-    cursor: grab;
+    scroll-behavior: smooth;
+    margin: 0;
 }
+.boxes::-webkit-scrollbar{
+    display: none;
+}
+
 @media only screen and (max-height: 750px) {
     .items {
         padding: 48px;
     }
 }
+
 .card1{
-    width: 320px;
-    height: 300px;
+    width: 300px;
+    /* height: 300px; */
     perspective: 1000px;
     border-radius: 0px 50px;
 }
@@ -55,34 +59,171 @@
     position: relative;
     text-align: center;
     transform-style: preserve-3d;
-    width: 100%;
-    height: 100%;
+    transition: transform 0.6s;
+    width: 20rem;
+    height: 48vh;
 }
 .colo{
     color: black;
+    font-size: calc(1em + 0.5vw) !important;
 }
 .front{
-    /* width: 16rem; */
-    /* height: 40vh; */
+    width: 20rem;
+    height: 48vh;
+    color: #000000;
     padding: 1.5rem 2rem;
-    height: 100%;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     background-color: #FCF6F4;
     border: 1px solid #fcf6f4;
     border-radius: 0px 50px;
-    
 }
 .disc{
-    /* font-size: calc(0.7em + 0.3vw); */
-    font-size: 13.3px;
-    /* font-weight: 500; */
+    font-size: calc(0.7em + 0.3vw);
     color: #000000;
 }
 .flip_front{
     width: 100%;
     height: 100%;
+    transform: rotateY(0deg);
     /* display: none; */
+}
+.flip_back{
+    width: 100%;
+    height: 100%;
+    transform: rotateY(180deg);
+}
+.back{
+    color: #fcf6f4;
+    border: 1px solid #fcf6f4;
+    border-radius: 0px 50px;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: 0.2s;
+}
+.flip_back, .flip_front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.back img{
+    width: 100%;
+}
+/* .next::after{
+    margin-top: 10%;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fcf6f4;
+
+} */
+.hast{
+    border-top: 2px solid rgb(252, 246, 244);
+    padding-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.hast span{
+    margin-right: 1rem;
+    font-size: calc(0.7em + 0.3vw);
+}
+.footer{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.open{
+    color: rgba(0, 0, 0, .8) !important;
+    background-color: #fcf6f4 !important;
+    text-decoration: none;
+    padding: .5rem calc(2rem + 2vw);
+    border-radius: 0 0 0 50px;
+    font-size: calc(.8em + .5vw);
+}
+.gith{
+    text-decoration: none;
+}
+.gith svg{
+    fill: #fcf6f4;
+    width: 30px;
+    height: 30px;
+}
+.card1:hover .card-inner{
+    transform: rotateY(180deg);
+}
+@media only screen and (max-width: 400px) {
+    .front, .back {
+        width: 14.8rem;
+        margin-right: 4rem;
+        height: 41.3vh;
+        padding: 1.5rem;
+        font-size: calc(0.7em + 0.3vw);
+        font-weight: bold !important;
+    }
+    .boxes{
+        left: 0em;
+    }
+    .colo {
+        color: black;
+        font-size: calc(1em + 1.5vw) !important;
+    }
+    .disc {
+        font-size: calc(0.7em + 0.7vw);
+    }
+}
+@media only screen and (min-width:400px) and (max-width: 480px) {
+    .front, .back {
+        width: 17.5rem;
+        margin-right: 4rem;
+        height: 41vh;
+    }
+    .boxes{
+        left: 0em;
+        padding: 100px 71px;
+    }
+}
+@media only screen and (min-width:480px) and (max-width: 768px) {
+    .front, .back {
+        width: 20rem;
+        height: 41vh;
+    }
+    .boxes{
+        
+        padding: 100px 80px;
+    }
+}
+.mar{
+    margin-right: 8rem;
+}
+.roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+.backt{
+    position: fixed;
+    top: 10%;
+    right: 20%;
+    color: rgba(252, 246, 244, 0.2);
+    font-size: calc(5rem + 5vw);
+    /* font-weight: 900 !important; */
+    z-index: 0;
+}
+.backt1{
+    position: fixed;
+    top: 80%;
+    right: 0%;
+    color: rgba(252, 246, 244, 0.2);
+    font-size: calc(5rem + 5vw);
+    z-index: 0;
 }

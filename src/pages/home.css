@@ -103,6 +103,10 @@ p{
     justify-content: space-evenly;
     font-size: 1.5rem;
 }
+#ski a{
+    color: black;
+    text-decoration: none;
+}
 .a1:hover{
     transform: scale(1.1) translateY(0px) translateZ(0px)
 }
@@ -199,6 +203,10 @@ p{
     #con p{
         font-size: 18.72px;
     }
+    .social a{
+        padding: 0.5rem 0;
+    }
+    
 }
 @media only screen and (min-width:480px) and (max-width:1180px){
     .resume{
@@ -209,4 +217,5 @@ p{
         z-index: 1;
         text-decoration: none;
     }
+    
 }

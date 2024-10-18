@@ -4,6 +4,9 @@ import './App.css'
 import Home from './pages/home'
 import Welcome from './welcome page/welcome'
 import Project from './pages/project';
+import About from './pages/about';
+import Skills from './pages/skills';
+
 
 function App() {
   return<>
@@ -11,7 +14,9 @@ function App() {
   <Routes>
     {/* <Route path='/' element={<Welcome/>}/> */}
     <Route path='/' element={<Home/>}/>
-    <Route path='/project'element={<Project/>}/>
+    <Route path='/project' element={<Project/>}/>
+    <Route path='/about' element={<About/>}/>
+    <Route path='/skill' element={<Skills/>}/>
   </Routes>
   </BrowserRouter>
   </>
