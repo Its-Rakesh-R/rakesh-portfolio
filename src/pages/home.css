@@ -4,6 +4,13 @@
     position: relative;
     padding: 1.5rem;
     margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scrollbar-width: none;
+}
+.navigate::-webkit-scrollbar{
+    display: none;
 }
 .navigate h1{
     margin: 0;
@@ -20,6 +27,7 @@ p{
     position: fixed;
     top: 2rem;
     left: 1.5rem;
+    z-index: 5;
 }
 .ubuntu-regular-italic {
     font-family: "Ubuntu", sans-serif;
@@ -33,20 +41,21 @@ p{
     /* font-size: 20px; */
   }
 .resume{
-    position: absolute;
+    /* position: fixed;
     top: 4% !important;
-    left: calc(1rem + 25vw);
+    left: calc(1rem + 25vw); */
     font-size: 1.5rem;
     cursor: pointer;
     color: rgb(0, 0, 0);
     text-decoration: none;
     /* transition: 1s; */
+    z-index: 5;
 }
-.resume:hover, #con:hover{
+#con4:hover{
     transform: translateY(0px) scale(1.1) translateZ(0px);
 }
 .arr{
-    position: absolute;
+    position: fixed;
     top: 2rem;
     left: 50%;
     transform: translate(-50%, 0px);
@@ -73,7 +82,7 @@ p{
     font-weight: 400;
 }
 #con{
-    position: absolute;
+    position: fixed;
     top: 2rem;
     right: calc(1rem + 2vw);
     text-decoration: none;
@@ -83,25 +92,27 @@ p{
 }
 #pro{
     color: rgb(0, 0, 0);
-    position: absolute;
+    position: fixed;
     top: 50%;
     right: calc(1rem + 2vw);
     transform: rotate(90deg)translate(-40%,-80%);
     font-size: 1.5rem;
     margin: 0;
     text-decoration: none;
+    z-index: 5;
 }
 #pro p:hover{
     transform: translateY(0px) scale(1.1) translateZ(0px);
 }
 #ski{
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     bottom: 1rem;
     display: flex;
     justify-content: space-evenly;
     font-size: 1.5rem;
+    z-index: 5;
 }
 #ski a{
     color: black;
@@ -144,7 +155,7 @@ p{
     height: 25px;
 }
 .heart{
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     cursor: pointer;
@@ -153,6 +164,23 @@ p{
     flex-direction: column;
     font-size: 100%;
     align-items: center;
+}
+
+.heart2{
+    position: absolute;
+    top: 85%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    transition: 1s;
+    overflow: hidden;
 }
 .heart svg{
     /* padding: 5%; */
@@ -177,11 +205,84 @@ p{
 .heart span{
     padding-top: 10%;   
 }
+
+.home2{
+    background: rgb(252, 246, 244);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.in-home2{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 50%;
+    width: 50%;
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    z-index: 1;
+}
+.next3{
+    width: 70vw;
+    height: 70vh;
+    display: flex;
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    right: 0px;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to left, #F4F6FF 50%, rgb(0, 0, 0) 50%) center bottom / 100% 2px no-repeat, linear-gradient(to left, #F4F6FF 50%, rgb(0, 0, 0) 50%) center top;
+    border-left: 2px solid #F4F6FF;
+    border-right: 2px solid rgb(0, 0, 0);
+}
+.part1{
+    width: 50%;
+    position: relative;
+    display: flex;
+    z-index: 6;
+
+}
+.inpart{
+    font-size: calc(1rem + 1.5vw);
+    color: rgb(252, 246, 244);
+    padding: 2rem;
+    cursor: crosshair;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* border: 1px solid #F4F6FF; */
+}
+.inpart > :first-child{
+    font-size: 2em;
+}
+.inpart > h3{
+    font-size: 1.17em;
+}
+.inpart > :last-child{
+    color: rgba(252, 246, 244, 0.6);
+    font-size: calc(0.5rem + 1.5vw);
+    font-weight: 300;
+}
+.rpart {
+    width: 50%;
+    position: relative;
+    display: flex;
+}
+.rpart .pic1{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+    height: auto;
+}
 @media only screen and (min-width:320px) and (max-width:480px){
     p{
         font-size: 16px;
     }
-    .heart{
+    .heart1{
         width: 150px;
         height: 150px;
     }
@@ -193,29 +294,136 @@ p{
         left: 1rem;
     }
     .resume{
-        position: absolute;
+        position: fixed;
         top: 25% !important;
         left: calc(1rem + 2vw);
-        transform: translate(-50%, -50%) rotate(-90deg);
+        /* transform: translate(-50%, -50%) rotate(-90deg); */
         z-index: 1;
         text-decoration: none;
     }
+    .resume3{
+        transform: translate(-50%, -50%) rotate(-90deg);
+    }
+    /* .resume3:hover{
+        transform: scale(1.1);
+    } */
     #con p{
         font-size: 18.72px;
     }
     .social a{
         padding: 0.5rem 0;
     }
-    
+    .in-home2{
+        height: 50%;
+        right: 0px;
+        width: 100%;
+        transition: width 0.5s, height 1s 0.5s;
+    }
+    .heart2{
+        width: 40px;
+        height: 40px;
+        top: 90%;
+        left: 90%;
+    }
+    .next3{
+        border-right-width: initial;
+        border-left-width: initial;
+        border-right-color: initial;
+        border-left-color: initial;
+        background: linear-gradient(#F4F6FF 50%, rgb(0, 0, 0) 50%) 0px 0px / 2px 100% no-repeat, linear-gradient( rgb(0, 0, 0) 50%, #F4F6FF 50%) 100% 0px;
+        border-style: solid none;
+        border-image: initial;
+        border-top: 2px solid rgb(252, 246, 244);
+        border-bottom: 2px solid rgb(0, 0, 0);
+        background-position: 0px 0px, 100% 0px;
+        width: 70vw;
+        
+        flex-direction: column;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+    .part1{
+        width: 100%;
+        height: 50%;
+        border-right: 2px solid #F4F6FF;
+    }
+    .inpart{
+        font-size: calc(1rem + 1.5vw);
+    }
+    .inpart > :last-child{
+        font-size: calc(0.5rem + 1vw);
+    }
+    .rpart{
+        width: 100%;
+        height: 50%;
+        border-right: 2px solid rgb(0, 0, 0);
+    }
+    .rpart .pic1{
+        width: 90%;
+    }
+    .final-color{
+        color: #FFFFFF !important;
+        text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    }
+    .final-color2{
+        color: rgb(0, 0, 0) !important;
+    }
+    .final-colorsvg svg{
+        fill: rgb(0, 0, 0) !important;
+    }
+    .finBack{
+        background-color: rgb(0, 0, 0) !important;
+    }
 }
 @media only screen and (min-width:480px) and (max-width:1180px){
     .resume{
-        position: absolute;
+        position: fixed;
         top: 25% !important;
         left: calc(1rem + 2vw);
-        transform: translate(-50%, -50%) rotate(-90deg);
+        /* transform: translate(-50%, -50%) rotate(-90deg); */
         z-index: 1;
         text-decoration: none;
     }
-    
+    .resume3{
+        transform: translate(-50%, -50%) rotate(-90deg);
+    }
+    /* .resume3:hover{
+        transform: scale(1.1);
+    } */
+     .heart2{
+        top: 90%;
+        left: 90%;
+        width: 80px;
+        height: 80px;
+     }
+    .part1{
+        border-top: 2px solid #F4F6FF;
+        border-bottom: 2px solid #F4F6FF;
+    }
+    .rpart{
+        border-top: 2px solid rgb(0, 0, 0);
+        border-bottom: 2px solid rgb(0, 0, 0);
+    }
+}
+@media only screen and (min-width:1180px){
+    .resume3:hover{
+        transform: translateY(0px) scale(1.1) translateZ(0px);
+    }
+    .resume{
+        position: fixed;
+        top: 4% !important;
+        left: calc(1rem + 25vw);
+        font-size: 1.5rem;
+    }
+    .part1{
+        border-top: 2px solid #F4F6FF;
+        border-bottom: 2px solid #F4F6FF;
+    }
+    .rpart{
+        border-top: 2px solid rgb(0, 0, 0);
+        border-bottom: 2px solid rgb(0, 0, 0);
+    }
+}
+.lastsvg svg{
+    fill: #F4F6FF;
 }
