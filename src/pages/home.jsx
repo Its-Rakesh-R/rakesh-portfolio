@@ -11,13 +11,14 @@ function Home(){
         'display2':'none',
         'color':'',
         'class':'',
-        'size':'200',
+        'size':'190',
         // 200
         'finColor':'',
         'finColor2':'',
         'fSvg':'',
         'lback':'',
-        'laSvg':''
+        'laSvg':'',
+        'newheart':'heart1'
     })
 
     const toggleFullScreen=()=>{
@@ -41,7 +42,8 @@ function Home(){
         copy.finColor2 = 'final-color2',
         copy.fSvg = 'final-colorsvg',
         copy.lback = 'finBack',
-        copy.laSvg = 'lastsvg'
+        copy.laSvg = 'lastsvg',
+        copy.newheart = '',
         setproperties(copy)
     }
     const delay = 0.6;
@@ -167,7 +169,7 @@ function Home(){
         transition={{ duration: 0.7, delay:0.6 }}
          id='line' className={properties.lback} style={{backgroundColor:properties.color}}></motion.span>
         </div>
-        <div className={`heart ${properties.class}`} onClick={toggleFullScreen}>
+        <div className={`heart heart1 ${properties.class}`} onClick={toggleFullScreen}>
             <svg xmlns="http://www.w3.org/2000/svg" width={properties.size} height={properties.size} fill="currentColor" class="bi bi-yin-yang" viewBox="0 0 16 16">
             <path d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0"/>
             <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7m7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334"/>
@@ -175,20 +177,43 @@ function Home(){
             <span style={{display:properties.display}}>Click here</span>
         </div>
         <div style={{display:properties.display2}}>
-        <div className='next3' >
+        <motion.div
+        initial={{height:0}}
+        animate={{height:'55vh'}}
+        exit={{height:0}}
+        transition={{ duration: 0.7, delay:0.6 }}
+         className='next3' >
             <div className='part1'>
-                <div className='inpart'>
+                <motion.div
+                initial={{ y: "10px" }}
+                animate={{ y: 0}}
+                exit={{
+                  y: "50%",
+                  
+                  transition: { duration: 0.25, delay, ease: "easeInOut" },
+                }}
+                transition={{ duration: 0.75, ease: "easeInOut", delay:0.6 }}
+                 className='inpart'>
                     <h1>Hi,</h1>
                     <h3>I'm Rakesh</h3>
                     <h6>a software developer with expertise in web development and full-stack engineering, driven by a passion for building efficient and scalable applications.</h6>
-                </div>
+                </motion.div>
             </div>
-            <div className='rpart'>
+            <motion.div
+            initial={{ y: "10px", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{
+              y: "50%",
+              opacity: 0,
+              transition: { duration: 0.25, delay, ease: "easeInOut" },
+            }}
+            transition={{ duration: 0.75, ease: "easeInOut", delay:0.6 }}
+             className='rpart'>
                 <div>
                 <img src={spaceman2} className='pic1'/>
                 </div>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
         </div>
     </motion.div>
     </>

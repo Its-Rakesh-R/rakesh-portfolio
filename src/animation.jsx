@@ -3,7 +3,7 @@ import Home from './pages/home'
 import Project from './pages/project';
 import About from './pages/about';
 import Skills from './pages/skills';
-import Particleback from './pages/particle';
+// import Particleback from './pages/particle';
 import { AnimatePresence } from 'framer-motion';
 
 function Animation1(){
@@ -16,7 +16,7 @@ function Animation1(){
       <Route path='/project' element={<Project/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/skill' element={<Skills/>}/>
-      <Route path='/particle' element={<Particleback/>}/>
+      {/* <Route path='/particle' element={<Particleback/>}/> */}
     </Routes>
     </AnimatePresence>
 }
