@@ -12,7 +12,7 @@ function Animation1(){
 
     return<AnimatePresence mode='wait'>
     <Routes location={location} key={location.pathname}>
-      <Route path='/rakesh-portfolio' element={<Home/>}/>
+      <Route path='/rakesh-portfolio/' element={<Home/>}/>
       <Route path='/project' element={<Project/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/skill' element={<Skills/>}/>
