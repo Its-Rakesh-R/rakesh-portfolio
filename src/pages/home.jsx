@@ -68,7 +68,7 @@ function Home(){
                 animate={{ x: 0.4 }}
                 exit={{ x: '-150%' }}
                 transition={{ duration: 0.7, delay }}
-                href='https://drive.google.com/file/d/1939ZgLA777BE7ofH_VT-9vC_mUsbjBFw/view?usp=sharing' target="_blank" className='resume'><p className='resume3' style={{color:properties.color}}>Resume</p></motion.a> :
+                href='https://drive.google.com/file/d/1DngNRUqlmmewloB4ZWZTienUN2n8cqAV/view?usp=drivesdk' target="_blank" className='resume'><p className='resume3' style={{color:properties.color}}>Resume</p></motion.a> :
                 <motion.a 
         initial={{ y: "-150%" }}
         animate={{ y: 0.4 }}
